@@ -55,7 +55,7 @@ run: $(EXEC)
 	taskset -c 1 ./recursive 67100000 67116384
 	taskset -c 1 ./harley 67100000 67116384
 
-plot: iteration.txt iteration.txt binary.txt byte.txt harley.txt
+plot: iteration.txt recursive.txt binary.txt byte.txt harley.txt
 	gnuplot scripts/runtime.gp
 
 .PHONY: clean
